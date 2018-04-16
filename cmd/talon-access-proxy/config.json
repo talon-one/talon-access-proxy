@@ -1,0 +1,36 @@
+[
+    {
+        // Address to listen on
+        "Address": "127.0.0.1:8000"
+
+        // Root path
+        "Root": "/"
+
+        // Talon api
+        "TalonAPI": "https://demo.talon.one"
+
+        // DNS Server that should be used for lookups
+        "DNSServer": "8.8.8.8:53"
+
+        // How many concurrent connections should be used
+        "MaxConnections": 100
+        
+
+        // Application specific settings
+        Application: {
+            // Application with the ID 1
+            "1": {
+                // Calculate HMAC for each request
+                "CalculateHMAC": false
+
+                // Application Key (required for CalculateHMAC)
+                ApplicationKey: "deadbeef"
+            }
+        }
+    },
+    {
+        // Open a second instance
+        "Address": "127.0.0.1:8001"
+        "TalonAPI": "https://demo.talon.one"
+    },
+]

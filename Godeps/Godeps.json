@@ -1,0 +1,146 @@
+{
+	"ImportPath": "github.com/talon-one/talon-access-proxy",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/Eun/hjson-go",
+			"Comment": "v3.0.0-2-gce720c6",
+			"Rev": "ce720c650e17e3aab31e06e9ca2e402677935d72"
+		},
+		{
+			"ImportPath": "github.com/Eun/microhelpers",
+			"Comment": "v1",
+			"Rev": "e8ea61a5cd855701f6868f0e02393f98a799c978"
+		},
+		{
+			"ImportPath": "github.com/araddon/dateparse",
+			"Rev": "c9a50ad15ed95a301129d74b25ede60000713c8d"
+		},
+		{
+			"ImportPath": "github.com/asaskevich/govalidator",
+			"Comment": "v8-18-g4b3d68f",
+			"Rev": "4b3d68f87f176641ffc147420296013aff66ea32"
+		},
+		{
+			"ImportPath": "github.com/davecgh/go-spew/spew",
+			"Comment": "v1.1.0-11-g87df7c6",
+			"Rev": "87df7c60d5820d0f8ae11afede5aa52325c09717"
+		},
+		{
+			"ImportPath": "github.com/hjson/hjson-go",
+			"Comment": "v3.0.0-11-g63bcf49",
+			"Rev": "63bcf490b6ed94150c0977b1b665c6672a50bfb5"
+		},
+		{
+			"ImportPath": "github.com/miekg/dns",
+			"Comment": "v1.0.5-4-g01d5935",
+			"Rev": "01d59357d468872339068bcd5d55a00e2463051f"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/mapstructure",
+			"Rev": "00c29f56e2386353d58c599509e8dc3801b0d716"
+		},
+		{
+			"ImportPath": "github.com/pmezard/go-difflib/difflib",
+			"Comment": "v1.0.0",
+			"Rev": "792786c7400a136282c1664665ae0a8db921c6c2"
+		},
+		{
+			"ImportPath": "github.com/spf13/cast",
+			"Comment": "v1.2.0",
+			"Rev": "8965335b8c7107321228e3e3702cab9832751bac"
+		},
+		{
+			"ImportPath": "github.com/spf13/pflag",
+			"Comment": "v1.0.0-10-g4c012f6",
+			"Rev": "4c012f6dcd9546820e378d0bdda4d8fc772cdfea"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/assert",
+			"Comment": "v1.2.0-4-g87b1dfb",
+			"Rev": "87b1dfb5b2fa649f52695dd9eae19abe404a4308"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/require",
+			"Comment": "v1.2.0-4-g87b1dfb",
+			"Rev": "87b1dfb5b2fa649f52695dd9eae19abe404a4308"
+		},
+		{
+			"ImportPath": "go.uber.org/atomic",
+			"Comment": "v1.3.1",
+			"Rev": "8474b86a5a6f79c443ce4b2992817ff32cf208b8"
+		},
+		{
+			"ImportPath": "go.uber.org/multierr",
+			"Comment": "v1.1.0-2-gddea229",
+			"Rev": "ddea229ff1dff9e6fe8a6c0344ac73b09e81fce5"
+		},
+		{
+			"ImportPath": "go.uber.org/zap",
+			"Comment": "v1.7.1-11-gf85c78b",
+			"Rev": "f85c78b1dd998214c5f2138155b320a4a43fbe36"
+		},
+		{
+			"ImportPath": "go.uber.org/zap/buffer",
+			"Comment": "v1.7.1-11-gf85c78b",
+			"Rev": "f85c78b1dd998214c5f2138155b320a4a43fbe36"
+		},
+		{
+			"ImportPath": "go.uber.org/zap/internal/bufferpool",
+			"Comment": "v1.7.1-11-gf85c78b",
+			"Rev": "f85c78b1dd998214c5f2138155b320a4a43fbe36"
+		},
+		{
+			"ImportPath": "go.uber.org/zap/internal/color",
+			"Comment": "v1.7.1-11-gf85c78b",
+			"Rev": "f85c78b1dd998214c5f2138155b320a4a43fbe36"
+		},
+		{
+			"ImportPath": "go.uber.org/zap/internal/exit",
+			"Comment": "v1.7.1-11-gf85c78b",
+			"Rev": "f85c78b1dd998214c5f2138155b320a4a43fbe36"
+		},
+		{
+			"ImportPath": "go.uber.org/zap/zapcore",
+			"Comment": "v1.7.1-11-gf85c78b",
+			"Rev": "f85c78b1dd998214c5f2138155b320a4a43fbe36"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ed25519",
+			"Rev": "c4a91bd4f524f10d064139674cf55852e055ad01"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ed25519/internal/edwards25519",
+			"Rev": "c4a91bd4f524f10d064139674cf55852e055ad01"
+		},
+		{
+			"ImportPath": "golang.org/x/net/bpf",
+			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+		},
+		{
+			"ImportPath": "golang.org/x/net/internal/iana",
+			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+		},
+		{
+			"ImportPath": "golang.org/x/net/internal/socket",
+			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+		},
+		{
+			"ImportPath": "golang.org/x/net/ipv4",
+			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+		},
+		{
+			"ImportPath": "golang.org/x/net/ipv6",
+			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+		},
+		{
+			"ImportPath": "gopkg.in/Eun/microhelpers.v1",
+			"Comment": "v1",
+			"Rev": "e8ea61a5cd855701f6868f0e02393f98a799c978"
+		}
+	]
+}
