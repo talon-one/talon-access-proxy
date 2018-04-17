@@ -36,6 +36,26 @@
 			"Rev": "63bcf490b6ed94150c0977b1b665c6672a50bfb5"
 		},
 		{
+			"ImportPath": "github.com/klauspost/compress/flate",
+			"Comment": "v1.2.1-21-g5fb1f31",
+			"Rev": "5fb1f31b0a61e9858f12f39266e059848a5f1cea"
+		},
+		{
+			"ImportPath": "github.com/klauspost/compress/gzip",
+			"Comment": "v1.2.1-21-g5fb1f31",
+			"Rev": "5fb1f31b0a61e9858f12f39266e059848a5f1cea"
+		},
+		{
+			"ImportPath": "github.com/klauspost/compress/zlib",
+			"Comment": "v1.2.1-21-g5fb1f31",
+			"Rev": "5fb1f31b0a61e9858f12f39266e059848a5f1cea"
+		},
+		{
+			"ImportPath": "github.com/klauspost/cpuid",
+			"Comment": "v1.1-4-ge7e905e",
+			"Rev": "e7e905edc00ea8827e58662220139109efea09db"
+		},
+		{
 			"ImportPath": "github.com/miekg/dns",
 			"Comment": "v1.0.5-4-g01d5935",
 			"Rev": "01d59357d468872339068bcd5d55a00e2463051f"
@@ -68,6 +88,25 @@
 			"ImportPath": "github.com/stretchr/testify/require",
 			"Comment": "v1.2.0-4-g87b1dfb",
 			"Rev": "87b1dfb5b2fa649f52695dd9eae19abe404a4308"
+		},
+		{
+			"ImportPath": "github.com/valyala/bytebufferpool",
+			"Rev": "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7"
+		},
+		{
+			"ImportPath": "github.com/valyala/fasthttp",
+			"Comment": "v20160617-123-ge5f51c1",
+			"Rev": "e5f51c11919d4f66400334047b897ef0a94c6f3c"
+		},
+		{
+			"ImportPath": "github.com/valyala/fasthttp/fasthttputil",
+			"Comment": "v20160617-123-ge5f51c1",
+			"Rev": "e5f51c11919d4f66400334047b897ef0a94c6f3c"
+		},
+		{
+			"ImportPath": "github.com/valyala/fasthttp/stackless",
+			"Comment": "v20160617-123-ge5f51c1",
+			"Rev": "e5f51c11919d4f66400334047b897ef0a94c6f3c"
 		},
 		{
 			"ImportPath": "go.uber.org/atomic",
@@ -119,23 +158,23 @@
 		},
 		{
 			"ImportPath": "golang.org/x/net/bpf",
-			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+			"Rev": "500e7a4f953ddaf55d316b4d3adc516aa0379622"
 		},
 		{
 			"ImportPath": "golang.org/x/net/internal/iana",
-			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+			"Rev": "500e7a4f953ddaf55d316b4d3adc516aa0379622"
 		},
 		{
 			"ImportPath": "golang.org/x/net/internal/socket",
-			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+			"Rev": "500e7a4f953ddaf55d316b4d3adc516aa0379622"
 		},
 		{
 			"ImportPath": "golang.org/x/net/ipv4",
-			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+			"Rev": "500e7a4f953ddaf55d316b4d3adc516aa0379622"
 		},
 		{
 			"ImportPath": "golang.org/x/net/ipv6",
-			"Rev": "6078986fec03a1dcc236c34816c71b0e05018fda"
+			"Rev": "500e7a4f953ddaf55d316b4d3adc516aa0379622"
 		},
 		{
 			"ImportPath": "gopkg.in/Eun/microhelpers.v1",
