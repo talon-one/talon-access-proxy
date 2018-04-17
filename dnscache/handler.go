@@ -1,8 +1,6 @@
 package dnscache
 
 import (
-	"strings"
-
 	"github.com/miekg/dns"
 	"go.uber.org/zap"
 )
@@ -17,15 +15,14 @@ func (handler handler) ServeDNS(w dns.ResponseWriter, r *dns.Msg) {
 		msg.Rcode = dns.RcodeServerFailure
 	} else {
 		for i := 0; i < len(r.Question); i++ {
-			name := strings.ToLower(r.Question[i].Name)
-			entries, err := handler.cache.getCacheEntries(name)
+			entries, err := handler.cache.Lookup(r.Question[i].Name, r.Question[i].Qclass, r.Question[i].Qtype)
 			if err != nil {
 				handler.cache.Logger.Error("Get cache entries failed", zap.String("error", err.Error()))
 				msg.Answer = []dns.RR{}
 				msg.Rcode = dns.RcodeServerFailure
 				break
 			}
-			handler.cache.addCacheEntries(name, entries, &msg.Answer)
+			handler.cache.addCacheEntries(r.Question[i].Name, entries, &msg.Answer)
 		}
 		if len(msg.Answer) <= 0 {
 			msg.Rcode = dns.RcodeServerFailure

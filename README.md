@@ -9,7 +9,7 @@ You find releases in [Github Releases](https://github.com/talon-one/talon-access
 
 Or you can use `go get`:
 ```bash
-go get gopkg.in/talon-one/talon-access-proxy.v1
+go get gopkg.in/talon-one/talon-access-proxy.v2
 ```
 
 # Usage

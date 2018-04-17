@@ -89,12 +89,13 @@ func (cache *DNSCache) Server() error {
 	return nil
 }
 
-func (cache *DNSCache) getCacheEntries(name string) ([]dns.RR, error) {
+func (cache *DNSCache) getCacheEntries(name string, Qclass uint16, Qtype uint16) ([]dns.RR, error) {
 	now := time.Now()
 	var entries []dns.RR
 again:
 	for i := 0; i < len(cache.entries); i++ {
-		if cache.entries[i].RR.Header().Name == name {
+		hdr := cache.entries[i].RR.Header()
+		if hdr.Class == Qclass && hdr.Rrtype == Qtype && hdr.Name == name {
 			if !cache.entries[i].ValidUntil.IsZero() && cache.entries[i].ValidUntil.Before(now) {
 				// dns entry is old
 				if err := cache.refreshCacheEntries(&cache.entries[i]); err != nil {
@@ -162,9 +163,7 @@ func (cache *DNSCache) ResolveAndAdd(dnsServer, net string, host string, Qclass 
 
 	client.Net = net
 	client.DialTimeout = cache.DialTimeout
-	host = strings.TrimRightFunc(host, func(r rune) bool {
-		return r == '.'
-	}) + "."
+	sanitizeHost(&host)
 
 	msg.Question = []dns.Question{
 		dns.Question{
@@ -242,4 +241,16 @@ func (cache *DNSCache) Addr() string {
 		return ""
 	}
 	return cache.server.PacketConn.LocalAddr().String()
+}
+
+// Lookup looks up an entry in the cache
+func (cache *DNSCache) Lookup(host string, Qclass uint16, Qtype uint16) ([]dns.RR, error) {
+	sanitizeHost(&host)
+	return cache.getCacheEntries(host, Qclass, Qtype)
+}
+
+func sanitizeHost(host *string) {
+	*host = strings.TrimRightFunc(strings.ToLower(*host), func(r rune) bool {
+		return r == '.'
+	}) + "."
 }

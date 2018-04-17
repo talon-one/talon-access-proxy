@@ -119,6 +119,8 @@ func (t *Tap) doHTTPRequest(r *http.Request) (*http.Response, error) {
 		Close:         false,
 	}
 
+	req.Header.Set("X-TAP", Version)
+
 	logger := t.logger
 
 	if t.logger.Core().Enabled(zap.DebugLevel) {
