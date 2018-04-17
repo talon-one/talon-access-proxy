@@ -134,6 +134,7 @@ func runConfig(config Config, errChan chan<- error) {
 	if err := http.ListenAndServe(config.Address, handler); err != nil {
 		errChan <- fmt.Errorf("Listen Error: %s", err.Error())
 	}
+	tap.Close()
 }
 
 func checkUpdates() {
