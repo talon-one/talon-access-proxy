@@ -88,7 +88,7 @@ func readConfig(dat map[string]interface{}) (config Config, err error) {
 	}
 	config.Address, err = microhelpers.ParseString([]string{"address", "a"}, []string{"ADDRESS", "APP_ADDRESS"}, config.Address, os.Args)
 	if err != nil {
-		return config, fmt.Errorf("Unable to read port: %s", err.Error())
+		return config, fmt.Errorf("Unable to read address: %s", err.Error())
 	}
 	if len(config.Address) <= 0 {
 		config.Address = fmt.Sprintf(":%d", port)
@@ -99,7 +99,7 @@ func readConfig(dat map[string]interface{}) (config Config, err error) {
 	}
 	config.Root, err = microhelpers.ParseString([]string{"root", "r"}, []string{"APP_ROOT"}, config.Root, os.Args)
 	if err != nil {
-		return config, fmt.Errorf("Unable to read port: %s", err.Error())
+		return config, fmt.Errorf("Unable to read root: %s", err.Error())
 	}
 	config.Root = "/" + strings.Trim(filepath.ToSlash(config.Root), "/")
 

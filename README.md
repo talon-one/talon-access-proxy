@@ -7,9 +7,9 @@ It is used for [talon.one](https://talon.one) as a middleware to reduce latency 
 # Installation
 You find releases in [Github Releases](https://github.com/talon-one/talon-access-proxy/releases) section.
 
-Or you can use `go get`:
+Or you can use `go install`:
 ```bash
-go get gopkg.in/talon-one/talon-access-proxy.v2
+go install github.com/talon-one/talon-access-proxy/cmd/talon-access-proxy
 ```
 
 # Usage
