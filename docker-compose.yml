@@ -1,4 +1,4 @@
-app:
+talon-access-proxy:
   build: .
   volumes:
     - ./:/go/src/github.com/talon-one/talon-access-proxy
