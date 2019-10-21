@@ -40,6 +40,7 @@ func (mux *mux) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(response.StatusCode)
 	if response.Body != nil {
+		defer response.Body.Close()
 		_, err := io.Copy(w, response.Body)
 		if err != nil && err != io.EOF {
 			mux.Logger.Error("Unable to copy body", zap.Error(err))
