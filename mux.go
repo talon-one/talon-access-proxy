@@ -22,6 +22,12 @@ func newMux(t *Tap) *mux {
 func (mux *mux) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	mux.Logger.Debug("Got Request", zap.String("method", r.Method), zap.String("url", r.URL.String()), zap.Int64("content-length", r.ContentLength), zap.Any("headers", r.Header))
 
+	if r.URL.String() == "/.health" {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+
+	
 	response, err := mux.Tap.doHTTPRequest(r)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
