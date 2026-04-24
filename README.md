@@ -1,8 +1,14 @@
 # talon-access-proxy
+
+> [!WARNING]
+> **This repository is no longer maintained.**
+>It has been archived and is no longer actively developed or supported. No further updates, bug fixes, or security patches will be provided.
+>For current integration guidance, please visit the [Talon.One docs](https://docs.talon.one/).
+>If you have further questions, please reach out to your Technical Account Manager at Talon.One or contact our support team.
+
 This is a standalone http proxy that caches connections to a server.
 
-It is used for [talon.one](https://talon.one) as a middleware to reduce latency to the talon.one api endpoint.
-
+It is used for [Talon.One](https://talon.one) as a middleware to reduce latency to the Talon.One API endpoints.
 
 # Installation
 You find releases in [Github Releases](https://github.com/talon-one/talon-access-proxy/releases) section.
